@@ -1,6 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -15,6 +15,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { PacientesComponent } from './Pages/pacientes/pacientes.component';
 import { EstadocivilComponent } from './Pages/estadocivil/estadocivil.component';
 import { TiposangreComponent } from './Pages/tiposangre/tiposangre.component';
+import { NuevopacienteComponent } from './Pages/pacientes/nuevopaciente/nuevopaciente.component';
 
 @NgModule({
   imports: [
@@ -25,14 +26,15 @@ import { TiposangreComponent } from './Pages/tiposangre/tiposangre.component';
     RouterModule,
     AppRoutingModule,
     NgbModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(), ReactiveFormsModule
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     PacientesComponent,
     EstadocivilComponent,
-    TiposangreComponent
+    TiposangreComponent,
+    NuevopacienteComponent
 
   ],
   providers: [],

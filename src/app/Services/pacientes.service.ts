@@ -31,9 +31,9 @@ export class PacientesService {
     pac.append('FechaNacimiento',paciente.FechaNacimiento.toString())
     return this.http.post<string>(url + 'insertar',pac);
   }
-  actualizar(paciente:IPacientes):Observable<string>{
+  actualizar(paciente:IPacientes, idPaciente:number):Observable<string>{
     var pac = new FormData();
-    pac.append('idPacientes',paciente.idPacientes.toString())
+    pac.append('idPacientes',idPaciente.toString())
     pac.append('Cedula',paciente.Cedula)
     pac.append('Nombres',paciente.Nombres)
     pac.append('Apellidos',paciente.Apellidos)

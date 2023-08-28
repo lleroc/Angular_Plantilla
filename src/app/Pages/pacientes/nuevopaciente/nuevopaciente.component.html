@@ -1,0 +1,72 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Nuevo Paciente</h5>
+        </div>
+        <div class="card-body">
+          <form  [formGroup]="paciente_form" (submit)="guardar()">
+            <div class="row">
+              <div class="col-md-5 pr-1">
+                <div class="form-group">
+                  <label>Cedula</label>
+                  <input type="text" formControlName="Cedula" class="form-control"  placeholder="Ingrese la cédula">
+                </div>
+              </div>
+              <div class="col-md-3 px-1">
+                <div class="form-group">
+                  <label>Nombres</label>
+                  <input type="text" class="form-control" placeholder="Ingrese su nombre" formControlName="Nombres" >
+                </div>
+              </div>
+              <div class="col-md-4 pl-1">
+                <div class="form-group">
+                  <label>Apellidos</label>
+                  <input  type="text" class="form-control" placeholder="Ingrese su apellido" formControlName="Apellidos">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>Fecha Nacimiento</label>
+                  <input type="date" class="form-control" placeholder="2022-01-01" formControlName="FechaNacimiento">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label>Estado Civil</label>
+                 <select formControlName="estado" class="form-control">
+                    <option *ngFor="let estado of listaEstados" [ngValue]="estado.idEstado_Civil">{{ estado.Detalle }}</option>
+                 </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Tipo de Sangre</label>
+                  <select formControlName="tipo" class="form-control">
+                    <option *ngFor="let tipo of listaTipos" [ngValue]="tipo.idTipoSangre">{{ tipo.Detalle }}</option>
+                 </select>
+                </div>
+              </div>
+            </div>
+           
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                <button type="submit" class="btn btn-danger" [disabled]="!paciente_form.valid">Grabar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</div>

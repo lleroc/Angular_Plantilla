@@ -3,7 +3,7 @@ import { environment } from '../../environments/environment.prod';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-const url = environment.url + 'estadocivil.controller.php?op=';
+const url = environment.url + 'tiposangre.controller.php?op=';
 
 @Injectable({
   providedIn: 'root'
