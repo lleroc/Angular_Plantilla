@@ -1,3 +1,3 @@
 export const environment = {
-  production: true
+  production: true, url : 'http://localhost/api/controllers/'
 };

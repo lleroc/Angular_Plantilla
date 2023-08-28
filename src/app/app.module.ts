@@ -12,6 +12,9 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { PacientesComponent } from './Pages/pacientes/pacientes.component';
+import { EstadocivilComponent } from './Pages/estadocivil/estadocivil.component';
+import { TiposangreComponent } from './Pages/tiposangre/tiposangre.component';
 
 @NgModule({
   imports: [
@@ -26,7 +29,10 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    PacientesComponent,
+    EstadocivilComponent,
+    TiposangreComponent
 
   ],
   providers: [],
